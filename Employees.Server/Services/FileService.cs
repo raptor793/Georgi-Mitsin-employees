@@ -30,8 +30,6 @@ namespace Employees.Server.Services
 
                 if (string.IsNullOrWhiteSpace(line))
                 {
-                    errors.AppendLine("No data for employees");
-
                     continue;
                 }
 

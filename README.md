@@ -12,3 +12,12 @@ The program is build using Angular and .Net Core template
 ## How to build:
 
 Clone the repository and build the solution with Visual Studio
+
+## Supported date formats:
+
+"yyyy-MM-dd", 
+"MM/dd/yyyy", 
+"dd-MM-yyyy",
+"yyyy/MM/dd", 
+"dd/MM/yyyy", 
+"M/d/yyyy"

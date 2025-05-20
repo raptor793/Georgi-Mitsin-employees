@@ -2,7 +2,7 @@
 
 <p *ngIf="!employees"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
 
-<div class="container vh-100 d-flex flex-column align-items-center">
+<div class="container mt-4 vh-100 d-flex flex-column align-items-center">
 
   <div class="d-flex gap-2 mb-4">
     <input id="formFile" type="file" class="form-control" accept=".csv" #fileInput (change)="onFileSelected($event)">

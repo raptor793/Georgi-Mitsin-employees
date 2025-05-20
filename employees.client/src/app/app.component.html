@@ -1,0 +1,42 @@
+<h1 id="tableLabel">Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!employees"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<div class="container vh-100 d-flex flex-column align-items-center">
+
+  <div class="d-flex gap-2 mb-4">
+    <input id="formFile" type="file" class="form-control" accept=".csv" #fileInput (change)="onFileSelected($event)">
+    <button class="btn btn-primary" (click)="onUploadFile(fileInput)">Read</button>
+  </div>
+
+  <div class="alert alert-info" role="alert" *ngIf="message">
+    {{message}}
+  </div>
+
+  <div class="alert alert-danger" role="alert" *ngIf="error">
+    {{error}}
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center" *ngIf="employees">
+      <thead>
+        <tr>
+          <th scope="col">Employee ID #1</th>
+          <th scope="col">Employee ID #2</th>
+          <th scope="col">Project ID</th>
+          <th scope="col">Days worked</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.employeeId1 }}</td>
+          <td>{{ employee.employeeId2 }}</td>
+          <td>{{ employee.projectId }}</td>
+          <td>{{ employee.daysWorked }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
